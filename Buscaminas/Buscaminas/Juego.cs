@@ -17,15 +17,16 @@ namespace Buscaminas
         public Juego()
         {
             InitializeComponent();
+            this.Juego_Load(null, null);
         }
 
         private void Juego_Load(object sender, EventArgs e)
         {
             int x, y, mines;
-            x = y = 9;
+            x = y = 20;
             mines = 10;
             this.gameGrid.loadGrid(new Size (x,y), mines);
-            this.MaximumSize = this.MinimumSize = new Size(this.gameGrid.Width +50, this.gameGrid.Height + 50);
+            this.MaximumSize = this.MinimumSize = new Size(this.gameGrid.Width + 50, this.gameGrid.Height + 100);
 
         }
 
@@ -34,8 +35,11 @@ namespace Buscaminas
             private Size gridSize;
             private int mines;
             private int flags;
+
+
             private void Tile_MouseDown(object sender, MouseEventArgs e )
             {
+                Tile cell = (Tile) sender;
 
             }
 
@@ -65,6 +69,19 @@ namespace Buscaminas
                 {
                     get;
                 }
+
+                internal bool Opened
+                {
+                    get;
+                    private set;
+                }
+
+                internal bool Flagged
+                {
+                    get;
+                    private set;
+                }
+
 
                 internal Tile(int x, int y)
                 {
