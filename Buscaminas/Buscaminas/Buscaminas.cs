@@ -19,6 +19,22 @@ namespace Buscaminas
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            this.domainUpDown1.Text = Minas.ToString();
+            this.domainUpDown2.Text = DimensionXY.ToString(); ;
+        }
+
+        private void domainUpDown1_SelectedItemChanged(object sender, EventArgs e)
+        {
+            numeros = domainUpDown1.Text;
+            Minas = Convert.ToInt16(numeros);
+            if(!(Minas>min && Minas < minasmax))
+            {
+
+            }
+        }
+
+        private void domainUpDown2_SelectedItemChanged(object sender, EventArgs e)
+        {
 
         }
     }
