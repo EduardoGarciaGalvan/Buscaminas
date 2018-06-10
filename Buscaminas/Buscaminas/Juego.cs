@@ -16,5 +16,10 @@ namespace Buscaminas
         {
             InitializeComponent();
         }
+
+        private void Juego_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
