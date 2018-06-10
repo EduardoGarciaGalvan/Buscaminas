@@ -73,6 +73,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -86,6 +87,48 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_miscellaneous-55_809451.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mina.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tile0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tile1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tile2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tile3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tile4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tile5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tile6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tile7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tile8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unnamed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Weaponary_-_Solid_-_021_-_Mine-128.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -28,13 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.gameGrid = new TileGrid();
             this.SuspendLayout();
             // 
+
+            //////
+            //
+            this.gameGrid.Name = "GameGrid";
+            this.gameGrid.Location = new System.Drawing.Point(10,50);
+            this.gameGrid.TabIndex = 0;
+
+            //
+            //
+
             // Juego
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(282, 303);
+            this.Controls.Add(this.gameGrid);
             this.MaximumSize = new System.Drawing.Size(600, 650);
             this.MinimumSize = new System.Drawing.Size(300, 350);
             this.Name = "Juego";
@@ -43,6 +55,9 @@
             this.ResumeLayout(false);
 
         }
+
+        private TileGrid gameGrid;
+
 
         #endregion
     }

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Buscaminas.Properties;
 
+
 namespace Buscaminas
 {
     public partial class Juego : Form
@@ -23,6 +24,8 @@ namespace Buscaminas
             int x, y, mines;
             x = y = 9;
             mines = 10;
+            this.gameGrid.loadGrid(new Size (x,y), mines);
+            this.MaximumSize = this.MinimumSize = new Size(this.gameGrid.Width +50, this.gameGrid.Height + 50);
 
         }
 
@@ -31,6 +34,10 @@ namespace Buscaminas
             private Size gridSize;
             private int mines;
             private int flags;
+            private void Tile_MouseDown(object sender, MouseEventArgs e )
+            {
+
+            }
 
             internal void loadGrid (Size gridSize, int mines)
             {
@@ -42,7 +49,10 @@ namespace Buscaminas
                 {
                     for (int z = 0; z < gridSize.Height; z++)
                     {
-                        Tile cell = new Tile(); 
+                        Tile cell = new Tile(c,z);
+                        cell.MouseDown += Tile_MouseDown;
+                        this.Controls.Add(cell);
+
                     }
                 }
             }
@@ -63,7 +73,9 @@ namespace Buscaminas
                     this.Location = new Point(x * LENGTH, y * LENGTH);
                     this.GridPosition = new Point(x, y);
                     this.Size = new Size(LENGTH, LENGTH);
-                    this.Image = Resources.Tile; 
+                    this.Image = Resources.Tile;
+                    this.SizeMode = PictureBoxSizeMode.Zoom;
+
                 }
             }
 
