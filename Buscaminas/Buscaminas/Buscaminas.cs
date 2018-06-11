@@ -33,5 +33,6 @@ namespace Buscaminas
             Game game = new Game(DimensionXY, Minas);
             game.Show();
         }
+        
     }
 }
