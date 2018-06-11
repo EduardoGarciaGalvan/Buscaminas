@@ -23,8 +23,9 @@ namespace Buscaminas
         private void Juego_Load(object sender, EventArgs e)
         {
             int x, y, mines;
-            x = y = 10;
-            mines = 10;
+            x = 10;
+            y = 15;
+            mines = 50;
             this.gameGrid.loadGrid(new Size (x,y), mines);
             this.MaximumSize = this.MinimumSize = new Size(this.gameGrid.Width + 50, this.gameGrid.Height + 100);
 
@@ -37,6 +38,7 @@ namespace Buscaminas
             private Size gridSize;
             private int mines;
             private int flags;
+                    // $ - When used to build strings with reference to other values. What previously had to be written as:
             private Tile this[Point point] => (Tile)this.Controls[$"Tile_{point.X}_{point.Y}"];
 
             private bool createdMines;
@@ -168,7 +170,6 @@ namespace Buscaminas
 
                 internal Tile(int x, int y)
                 {
-                    //-When used to build strings with reference to other values. What previously had to be written as:
                     this.Name = $"Tile_{x}_{y}";
                     this.Location = new Point(x * LENGTH, y * LENGTH);
                     this.GridPosition = new Point(x, y);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Game));
             this.gameGrid = new Buscaminas.Game.TileGrid();
             this.btnNewGame = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -57,6 +58,7 @@
             this.ClientSize = new System.Drawing.Size(282, 303);
             this.Controls.Add(this.btnNewGame);
             this.Controls.Add(this.gameGrid);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(600, 650);
             this.MinimumSize = new System.Drawing.Size(300, 350);
             this.Name = "Game";
