@@ -44,13 +44,13 @@
             this.Start.TabIndex = 0;
             this.Start.Text = "Start";
             this.Start.UseVisualStyleBackColor = true;
+            this.Start.Click += new System.EventHandler(this.Start_Click);
             // 
             // domainUpDown1
             // 
             this.domainUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.domainUpDown1.Location = new System.Drawing.Point(271, 42);
             this.domainUpDown1.Name = "domainUpDown1";
-            this.domainUpDown1.ReadOnly = true;
             this.domainUpDown1.Size = new System.Drawing.Size(88, 34);
             this.domainUpDown1.TabIndex = 1;
             this.domainUpDown1.Text = "0";
@@ -64,7 +64,6 @@
             this.domainUpDown2.Size = new System.Drawing.Size(88, 34);
             this.domainUpDown2.TabIndex = 2;
             this.domainUpDown2.Text = "0";
-            this.domainUpDown2.SelectedItemChanged += new System.EventHandler(this.domainUpDown2_SelectedItemChanged);
             // 
             // label1
             // 
@@ -76,7 +75,6 @@
             this.label1.Size = new System.Drawing.Size(77, 29);
             this.label1.TabIndex = 3;
             this.label1.Text = "Minas";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -89,7 +87,7 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Dimensiones (X, Y)";
             // 
-            // Buscaminas
+            // Buscaminasmp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -104,7 +102,7 @@
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(600, 600);
             this.MinimumSize = new System.Drawing.Size(300, 300);
-            this.Name = "Buscaminas";
+            this.Name = "Buscaminasmp";
             this.Text = "Buscaminas";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
@@ -114,7 +112,7 @@
 
         #endregion
         private string numeros;
-        private const int min = 2, minasmax = 100, dimensionesmax = 10;
+        private const int min = 0, minasmax = 99, dimensionesmax = 10;
         private int Minas = 0, DimensionXY = 1;
         private System.Windows.Forms.Button Start;
         private System.Windows.Forms.DomainUpDown domainUpDown1;

@@ -14,17 +14,17 @@ namespace Buscaminas
 {
     public partial class Game : Form
     {
-        public Game()
+        public Game(int DimensionXY, int Minas)
         {
-            InitializeComponent();
+            InitializeComponent(DimensionXY, Minas);
           //  this.Juego_Load(null, null);
         }
 
         private void Juego_Load(object sender, EventArgs e)
         {
             int x, y, mines;
-            x = y = 20;
-            mines = 10;
+            x = y = DimensionXY;
+            mines = Minas;
             this.gameGrid.loadGrid(new Size (x,y), mines);
             this.MaximumSize = this.MinimumSize = new Size(this.gameGrid.Width + 50, this.gameGrid.Height + 100);
 
