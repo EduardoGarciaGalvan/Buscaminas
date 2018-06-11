@@ -130,5 +130,8 @@
   <ItemGroup>
     <None Include="Resources\Weaponary_-_Solid_-_021_-_Mine-128.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Flag.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
