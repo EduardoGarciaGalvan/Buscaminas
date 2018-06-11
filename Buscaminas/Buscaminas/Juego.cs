@@ -65,6 +65,8 @@ namespace Buscaminas
             {
                 internal const int LENGTH = 25;
 
+                private bool flagged;
+
                 internal Point GridPosition
                 {
                     get;
@@ -76,16 +78,28 @@ namespace Buscaminas
                     private set;
                 }
 
-                internal bool Flagged
+                internal bool Mined
                 {
                     get;
                     private set;
                 }
+                internal bool Flagged
+                {
+                    get => this.flagged;
+                    set
+                    {
+                        this.flagged = value;
+                        this.image = value ? Resources.Flag;
+
+                    }
+                }
+
+
 
 
                 internal Tile(int x, int y)
                 {
-                    // It is comes into its own when used to build strings with reference to other values. What previously had to be written as:
+                    //-When used to build strings with reference to other values. What previously had to be written as:
                     this.Name = $"Tile_{x}_{y}";
                     this.Location = new Point(x * LENGTH, y * LENGTH);
                     this.GridPosition = new Point(x, y);

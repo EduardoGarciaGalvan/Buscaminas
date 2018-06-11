@@ -61,6 +61,16 @@ namespace Buscaminas.Properties {
         }
         
         /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Flag {
+            get {
+                object obj = ResourceManager.GetObject("Flag", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
         /// </summary>
         internal static System.Drawing.Icon if_miscellaneous_55_809451 {
