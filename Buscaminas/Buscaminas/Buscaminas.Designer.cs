@@ -44,6 +44,7 @@
             this.Start.TabIndex = 0;
             this.Start.Text = "Start";
             this.Start.UseVisualStyleBackColor = true;
+            this.Start.Click += new System.EventHandler(this.Start_Click);
             // 
             // domainUpDown1
             // 
@@ -89,7 +90,7 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Dimensiones (X, Y)";
             // 
-            // Buscaminas
+            // Buscaminasmp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -104,7 +105,7 @@
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(600, 600);
             this.MinimumSize = new System.Drawing.Size(300, 300);
-            this.Name = "Buscaminas";
+            this.Name = "Buscaminasmp";
             this.Text = "Buscaminas";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);

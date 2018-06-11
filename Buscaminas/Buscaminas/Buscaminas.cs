@@ -42,5 +42,14 @@ namespace Buscaminas
         {
 
         }
+
+        private void Start_Click(object sender, EventArgs e)
+        {
+            
+                this.Hide();
+            Game Ngame = new Game();
+                Ngame.Show();
+            
+        }
     }
 }

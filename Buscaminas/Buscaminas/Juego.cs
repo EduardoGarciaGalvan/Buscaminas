@@ -261,6 +261,11 @@ namespace Buscaminas
 
         }
 
-
+        private void btnNewGame_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Buscaminasmp MP = new Buscaminasmp();
+            MP.Show();
+        }
     }
 }
