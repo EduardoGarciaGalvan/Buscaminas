@@ -67,18 +67,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -132,6 +132,63 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Flag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FFlag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tile_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tile_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tile_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tile_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tile_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tile_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tile_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tile_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tile_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ETile_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ETile_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ETile_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ETile_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ETile_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ETile_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ETile_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ETile_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ETile_7.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

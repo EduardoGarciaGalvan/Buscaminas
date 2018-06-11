@@ -16,7 +16,7 @@ namespace Buscaminas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Juego());
+            Application.Run(new Game());
 
         }
     }

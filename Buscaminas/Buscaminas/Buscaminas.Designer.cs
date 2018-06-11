@@ -1,6 +1,6 @@
 ﻿namespace Buscaminas
 {
-    partial class Buscaminas
+    partial class Buscaminasmp
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Buscaminas));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Buscaminasmp));
             this.Start = new System.Windows.Forms.Button();
             this.domainUpDown1 = new System.Windows.Forms.DomainUpDown();
             this.domainUpDown2 = new System.Windows.Forms.DomainUpDown();
@@ -76,6 +76,7 @@
             this.label1.Size = new System.Drawing.Size(77, 29);
             this.label1.TabIndex = 3;
             this.label1.Text = "Minas";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 

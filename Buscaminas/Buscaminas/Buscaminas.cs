@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Buscaminas
 {
-    public partial class Buscaminas : Form
+    public partial class Buscaminasmp : Form
     {
-        public Buscaminas()
+        public Buscaminasmp()
         {
             InitializeComponent();
         }
@@ -34,6 +34,11 @@ namespace Buscaminas
         }
 
         private void domainUpDown2_SelectedItemChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

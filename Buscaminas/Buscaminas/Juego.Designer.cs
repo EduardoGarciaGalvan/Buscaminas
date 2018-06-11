@@ -1,6 +1,6 @@
 ﻿namespace Buscaminas
 {
-    partial class Juego
+    partial class Game
     {
         /// <summary>
         /// Required designer variable.
@@ -28,19 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.gameGrid = new TileGrid();
+            this.gameGrid = new Buscaminas.Game.TileGrid();
             this.SuspendLayout();
             // 
-
-            //////
-            //
-            this.gameGrid.Name = "GameGrid";
-            this.gameGrid.Location = new System.Drawing.Point(10,50);
+            // gameGrid
+            // 
+            this.gameGrid.Location = new System.Drawing.Point(10, 50);
+            this.gameGrid.Name = "gameGrid";
+            this.gameGrid.Size = new System.Drawing.Size(200, 100);
             this.gameGrid.TabIndex = 0;
-
-            //
-            //
-
+            // 
             // Juego
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);

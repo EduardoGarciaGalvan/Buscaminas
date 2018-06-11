@@ -12,12 +12,12 @@ using Buscaminas.Properties;
 
 namespace Buscaminas
 {
-    public partial class Juego : Form
+    public partial class Game : Form
     {
-        public Juego()
+        public Game()
         {
             InitializeComponent();
-            this.Juego_Load(null, null);
+          //  this.Juego_Load(null, null);
         }
 
         private void Juego_Load(object sender, EventArgs e)
@@ -33,6 +33,7 @@ namespace Buscaminas
         private class TileGrid:Panel
         {
             private static readonly Random random = new Random();
+            private static readonly HashSet<Tile> gridSearchBlacklist = new HashSet<Tile>();
             private Size gridSize;
             private int mines;
             private int flags;
@@ -51,6 +52,15 @@ namespace Buscaminas
                             if(!this.createdMines)
                             {
                                 this.CreateMines(cell);
+                            }
+                            if (cell.Mined)
+                            {
+                                this.DisableTiles(true);
+                            }
+                            else
+                            {
+                                cell.TestAdjecentTiles();
+                                gridSearchBlacklist.Clear();
                             }
                             break;
                         case MouseButtons.Right when this.flags > 0:
@@ -107,6 +117,18 @@ namespace Buscaminas
                         c--;
                     }
                     this.createdMines = true;
+                }
+            }
+
+            private void DisableTiles(bool gameOver)
+            {
+                foreach (Tile cell in this.Controls)
+                {
+                    cell.MouseDown -= this.Tile_MouseDown;
+                    if(gameOver)
+                    {
+                        cell.Image = !cell.Opened && cell.Mined && !cell.Flagged ? Resources.unnamed : cell.Flagged && !cell.Mined ? Resources.FFlag : cell.Image;  
+                    }
                 }
             }
 
@@ -167,6 +189,8 @@ namespace Buscaminas
                     }
                 }
 
+                private int adjecentMines => this.AdjecentTiles.Count(cell => cell.Mined);
+
                 internal void setAdjecentTiles()
                 {
                     TileGrid GameGrid = (TileGrid)this.Parent;
@@ -182,10 +206,33 @@ namespace Buscaminas
                     this.AdjecentTiles = adjecentTiles.ToArray();
                 }
 
+                internal void TestAdjecentTiles()
+                {
+                    if(this.flagged || gridSearchBlacklist.Contains(this))
+                    {
+                        return;
+                    }
+                    gridSearchBlacklist.Add(this);
+                    if(this.adjecentMines == 0)
+                    {
+                        foreach(Tile cell in this.AdjecentTiles)
+                        {
+                            cell.TestAdjecentTiles();
+                        }
+                    }
+                    this.Open();
+                }
+
                 internal void Mine()
                 {
                     this.Mined = true;
-                    this.Image = Resources.unnamed;
+                    //this.Image = Resources.unnamed;
+                }
+
+                private void Open()
+                {
+                    this.Opened = true;
+                    this.Image = (Image)Resources.ResourceManager.GetObject($"ETile_{this.adjecentMines}");
                 }
 
             }
