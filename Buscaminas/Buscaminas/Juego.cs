@@ -64,10 +64,22 @@ namespace Buscaminas
                             }
                             break;
                         case MouseButtons.Right when this.flags > 0:
+                            if(cell.Flagged)
+                            {
+                                cell.Flagged = false;
+                                this.flags++;
+                            }
+                            else
+                            {
+                                cell.Flagged = true;
+                                this.flags--;
+                            }
+
                             break;
 
                     }
                 }
+                this.CheckWin();
 
             }
 
@@ -130,6 +142,16 @@ namespace Buscaminas
                         cell.Image = !cell.Opened && cell.Mined && !cell.Flagged ? Resources.unnamed : cell.Flagged && !cell.Mined ? Resources.FFlag : cell.Image;  
                     }
                 }
+            }
+
+            private void CheckWin()
+            {
+                if(this.flags != 0 && this.Controls.OfType<Tile>().Count(cell => cell.Opened || cell.Flagged) != this.gridSize.Width * this.gridSize.Height)
+                {
+                    return;
+                }
+                MessageBox.Show("You Win!");
+                this.DisableTiles(false);
             }
 
             private class Tile:PictureBox
