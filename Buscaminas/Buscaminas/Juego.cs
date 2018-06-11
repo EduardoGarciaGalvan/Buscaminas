@@ -23,7 +23,7 @@ namespace Buscaminas
         private void Juego_Load(object sender, EventArgs e)
         {
             int x, y, mines;
-            x = y = 20;
+            x = y = 10;
             mines = 10;
             this.gameGrid.loadGrid(new Size (x,y), mines);
             this.MaximumSize = this.MinimumSize = new Size(this.gameGrid.Width + 50, this.gameGrid.Height + 100);

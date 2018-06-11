@@ -35,10 +35,10 @@
             // 
             this.gameGrid.Location = new System.Drawing.Point(10, 50);
             this.gameGrid.Name = "gameGrid";
-            this.gameGrid.Size = new System.Drawing.Size(200, 100);
+            this.gameGrid.Size = new System.Drawing.Size(260, 241);
             this.gameGrid.TabIndex = 0;
             // 
-            // Juego
+            // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -46,7 +46,7 @@
             this.Controls.Add(this.gameGrid);
             this.MaximumSize = new System.Drawing.Size(600, 650);
             this.MinimumSize = new System.Drawing.Size(300, 350);
-            this.Name = "Juego";
+            this.Name = "Game";
             this.Text = "Juego";
             this.Load += new System.EventHandler(this.Juego_Load);
             this.ResumeLayout(false);
